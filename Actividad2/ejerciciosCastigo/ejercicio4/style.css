@@ -19,23 +19,26 @@ h2 {
   text-align: center;
 }
 
-textarea {
+input {
   width: 100%;
-  height: 100px;
   padding: 8px;
-  font-size: 14px;
-  resize: none;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
-.contador {
-  text-align: right;
-  margin-top: 5px;
-  font-size: 14px;
+ul {
+  list-style: none;
+  padding: 0;
 }
 
-#alerta {
+li {
+  padding: 6px;
+  border-bottom: 1px solid #ddd;
+}
+
+#mensajeFiltro {
   margin-top: 10px;
+  text-align: center;
   font-weight: bold;
   color: red;
-  text-align: center;
 }
