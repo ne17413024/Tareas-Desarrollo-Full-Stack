@@ -68,6 +68,13 @@ Abrir el archivo `index.html` correspondiente en un navegador moderno.
 
 Aplicación full-stack que permite crear, gestionar y estudiar guías de estudio personalizadas. Consta de una API REST en FastAPI y una app móvil en React Native y Expo.
 
+## 👥 Integrantes
+
+- Natanael Jaime Janacua Elias
+- Narciso Guadalupe
+- Rodrigo Hernandez Luna
+- Caleb de Leon
+
 ---
 
 ## Link: https://avance-proyecto-dfs.netlify.app/

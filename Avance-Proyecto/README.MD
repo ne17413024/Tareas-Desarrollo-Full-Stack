@@ -4,6 +4,13 @@
 
 Esta aplicación full-stack permite a los usuarios crear, gestionar y estudiar guías de estudio personalizadas. Consiste en una API REST desarrollada con FastAPI y una aplicación móvil construida con React Native y Expo.
 
+## 👥 Integrantes
+
+- Natanael Jaime Janacua Elias
+- Narciso Guadalupe
+- Rodrigo Hernandez Luna
+- Caleb de Leon
+
 ## 🛠️ Tecnologías Utilizadas
 
 ### Backend (API)
@@ -268,6 +275,7 @@ Para contribuir al proyecto:
 3. Commit tus cambios (`git commit -am 'Agrega nueva funcionalidad'`)
 4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
 5. Crear un Pull Request
+
 
 ## 👥 Autor
 
