@@ -41,7 +41,7 @@ export default function Register({ navigation }) {
   try {
     setLoading(true);
 
-    const response = await fetch("https://2dd50ee9fc1b.ngrok-free.app/register", {
+    const response = await fetch("https://ed9e38b87562.ngrok-free.app/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
