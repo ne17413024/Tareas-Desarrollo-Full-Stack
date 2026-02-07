@@ -62,6 +62,52 @@ Abrir el archivo `index.html` correspondiente en un navegador moderno.
 
 ---
 
+### Actividad 3: API RESTful de Gestión de Tareas con Autenticación
+
+Desarrollo de una **API RESTful** utilizando **Node.js y Express.js** para la gestión de tareas (To-Do List), implementando operaciones CRUD completas y un sistema de autenticación basado en **JWT (JSON Web Tokens)**.
+
+La actividad pone en práctica conceptos fundamentales del desarrollo backend como la asincronía, el manejo del Event Loop, la creación de middlewares personalizados, el manejo centralizado de errores y la persistencia de datos mediante archivos JSON utilizando `fs.promises`.
+
+#### Funcionalidades Principales
+- Registro de usuarios con contraseñas cifradas usando **bcrypt**
+- Inicio de sesión con generación de **tokens JWT**
+- Protección de rutas mediante middleware de autenticación
+- CRUD completo de tareas:
+  - Crear tareas
+  - Listar tareas
+  - Actualizar tareas
+  - Eliminar tareas
+- Manejo centralizado de errores HTTP
+- Persistencia de datos en archivos JSON (`tareas.json` y `usuarios.json`)
+
+#### Endpoints Implementados
+- `POST /register` – Registro de usuarios
+- `POST /login` – Autenticación y obtención de token
+- `GET /tareas` – Obtener todas las tareas (protegido)
+- `POST /tareas` – Crear una nueva tarea (protegido)
+- `PUT /tareas/:id` – Actualizar una tarea existente (protegido)
+- `DELETE /tareas/:id` – Eliminar una tarea (protegido)
+
+#### Tecnologías Utilizadas
+- **Node.js**
+- **Express.js**
+- **JWT (jsonwebtoken)**
+- **bcryptjs**
+- **fs.promises**
+- **Thunder Client** (para pruebas de la API)
+
+#### Estructura de la Actividad
+```text
+actividad3-api-tareas/
+├── server.js
+├── package.json
+├── tareas.json
+├── usuarios.json
+└── README.md
+```
+
+---
+
 # Avance de Proyecto: Aplicación de Guías de Estudio
 
 ## 📋 Descripción del Proyecto
