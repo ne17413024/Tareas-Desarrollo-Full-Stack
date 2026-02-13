@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff9966, #ff5e62);
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      width: 320px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #ff5e62;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #e04e52;
+    }
+
+    a {
+      display: block;
+      margin-top: 15px;
+      color: #ff5e62;
+      text-decoration: none;
+    }
+
+    #message {
+      margin-top: 10px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Crear Cuenta</h2>
+
+    <form id="registerForm">
+      <input type="text" id="name" placeholder="Nombre completo" required />
+      <input type="email" id="email" placeholder="Correo electrónico" required />
+      <input type="password" id="password" placeholder="Contraseña" required />
+      <button type="submit">Registrarse</button>
+    </form>
+
+    <p id="message"></p>
+
+    <a href="/login">¿Ya tienes cuenta? Inicia sesión</a>
+  </div>
+
+  <script>
+    const form = document.getElementById('registerForm');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      const response = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        document.getElementById('message').style.color = "green";
+        document.getElementById('message').innerText = "Usuario registrado correctamente ✅";
+
+        // Opcional: redirigir al login después de 2 segundos
+        setTimeout(() => {
+          window.location.href = "/login";
+        }, 2000);
+
+      } else {
+        document.getElementById('message').style.color = "red";
+        document.getElementById('message').innerText = data.message || "Error al registrar";
+      }
+    });
+  </script>
+
+</body>
+</html>

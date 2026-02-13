@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #11998e, #38ef7d);
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    .card {
+      background: rgba(0,0,0,0.3);
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: white;
+      color: #11998e;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Bienvenido a la App 🚀</h1>
+    <p>Has iniciado sesión correctamente</p>
+    <button onclick="logout()">Cerrar sesión</button>
+  </div>
+
+  <script>
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+      window.location.href = "/login";
+    }
+
+    function logout() {
+      localStorage.removeItem('token');
+      window.location.href = "/login";
+    }
+  </script>
+
+</body>
+</html>
