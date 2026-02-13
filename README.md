@@ -108,6 +108,62 @@ actividad3-api-tareas/
 
 ---
 
+## 🗄️ Actividad 4: Sistema de Gestión de Usuarios
+
+Desarrollo de una **aplicación web full stack** utilizando **Node.js, Express.js y MongoDB**, implementando un sistema completo de autenticación con **JWT** y un módulo CRUD para la gestión de productos.
+
+La aplicación sigue el patrón de arquitectura **MVC (Model-View-Controller)**, separando responsabilidades entre modelos, controladores, rutas y middlewares. Incluye un frontend desarrollado con **HTML, CSS y JavaScript vanilla**, y está desplegada en un servidor **Debian 13** utilizando **PM2** como gestor de procesos en producción.
+
+Esta actividad refuerza conceptos avanzados como:
+
+- Conexión a base de datos con **Mongoose**
+- Encriptación de contraseñas con **bcryptjs**
+- Autenticación sin estado con **JSON Web Tokens (JWT)**
+- Protección de rutas mediante middleware personalizado
+- Pruebas automatizadas con **Jest y Supertest**
+- Despliegue en servidor Linux con **PM2**
+- Configuración de variables de entorno con **dotenv**
+
+---
+
+### 🚀 Funcionalidades Implementadas
+
+- Registro de usuarios con contraseñas hasheadas
+- Inicio de sesión con generación de token JWT
+- Protección de rutas privadas
+- CRUD completo de productos:
+  - Crear producto
+  - Listar productos
+  - Actualizar producto
+  - Eliminar producto
+- Pruebas automatizadas de autenticación y autorización
+
+---
+
+### 🌐 Despliegue en Producción
+
+- **Servidor:** Debian 13 (1 vCPU, 1GB RAM)
+- **IP Pública:** http://168.181.187.215:3000/login
+- **Gestor de Procesos:** PM2
+- **Base de Datos:** MongoDB local
+
+---
+
+### 📁 Estructura del Proyecto
+
+```text
+actividad4/
+├── public/
+├── src/
+├── tests/
+├── server.js
+├── package.json
+├── .env
+└── README.md
+```
+
+---
+
 # Avance de Proyecto: Aplicación de Guías de Estudio
 
 ## 📋 Descripción del Proyecto
@@ -147,6 +203,7 @@ Aplicación full-stack que permite crear, gestionar y estudiar guías de estudio
 
 ## 📁 Estructura del Proyecto
 
+```text
 Avance-Proyecto/
 ├── api/
 │ ├── main.py
@@ -163,6 +220,7 @@ Avance-Proyecto/
 │ ├── utils/
 │ └── assets/
 └── README.md
+```
 
 ---
 
